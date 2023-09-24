@@ -1,0 +1,147 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #a7e2ee; /* Default background color */
+    color: #fff; /* Default text color */
+  }
+  
+  /* Dark Theme */
+  .dark-theme {
+    --background: #1e1e1e; /* Dark background */
+    --text: #fff; /* White text */
+    --button-bg: #272727; /* Dark gray button background */
+    --button-text: #fff; /* White button text */
+    --keypad-bg: #1e1e1e; /* Dark gray keypad background */
+    --keypad-text: #fff; /* White keypad text */
+  }
+  
+  /* Light Theme */
+  .light-theme {
+    --background: #f0f0f0; /* Light background */
+    --text: #333; /* Dark text */
+    --button-bg: #f0f0f0; /* Light gray button background */
+    --button-text: #000; /* Black button text */
+    --keypad-bg: #ccc; /* Light gray keypad background */
+    --keypad-text: #000; /* Black keypad text */
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--background); /* Use the theme-specific background */
+    color: var(--text); /* Use the theme-specific text color */
+    transition: all 0.3s ease-in-out;
+  }
+
+ 
+
+    .container {
+        width: 100%; /* Reduce the width of the container on smaller screens */
+    }
+
+    input[type="text"] {
+        font-size: 18px; /* Decrease font size for input fields on smaller screens */
+    }
+
+    .keypad {
+        grid-template-columns: repeat(2, 1fr); /* Change grid columns for the keypad on smaller screens */
+        gap: 5px; /* Reduce gap between keypad items on smaller screens */
+    }
+
+    button {
+        font-size: 18px; /* Decrease font size for buttons on smaller screens */
+        padding: 10px 15px; /* Adjust padding for buttons on smaller screens */
+    }
+
+    .maximize-button,
+    .theme-toggle-button {
+        padding: 10px 15px; /* Adjust padding for buttons on smaller screens */
+    }   
+  
+  .maximized {
+    transform: scale(1.1);
+  }
+  
+  .container {
+    background-color: var(--background); /* Use the theme-specific background */
+    border-radius: 10px;
+    padding: 0px;
+    box-shadow: 0 0 10px rgba(1, 13, 15, 0.5);
+  }
+  
+  form {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333; /* Dark input field */
+    color: #fff;
+    background-color: var(--background); /* Use the theme-specific background */
+    color: var(--text); /* Use the theme-specific text color */
+  }
+  
+  .keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: var(--keypad-bg); /* Use the theme-specific keypad background */
+  }
+  
+  button {
+    font-size: 24px;
+    padding: 15px 20px;
+    border: none;
+    /* border-radius: 50%; Rounded buttons with 50% border-radius */
+    cursor: pointer;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+  }
+  
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .maximize-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .maximize-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .theme-toggle-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .theme-toggle-button:hover {
+    background-color: #0056b3;
+  }
+  
